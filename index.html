@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Performance Laboratory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 { color: #2e7d32; }
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        #sequentialBtn { background-color: #0288d1; color: white; }
+        #sequentialBtn:hover { background-color: #01579b; }
+        #parallelBtn { background-color: #2e7d32; color: white; }
+        #parallelBtn:hover { background-color: #1b5e20; }
+        
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            min-height: 100px;
+        }
+        .meta-info {
+            background: #f1f8e9;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .user-card {
+            border-bottom: 2px solid #2e7d32;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .post-card {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0288d1;
+        }
+        .comments-section {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        .comment-item {
+            font-size: 0.9rem;
+            background: #fff;
+            padding: 6px 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        .error-banner {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 12px;
+            border-radius: 4px;
+            border-left: 4px solid #c62828;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Async Architecture Dashboard</h1>
+    <p>Compare operational timings between sequential resource resolution waterfalls and distributed parallel executions below.</p>
+
+    <div class="controls">
+        <button id="sequentialBtn">Run Sequential Fetch</button>
+        <button id="parallelBtn">Run Parallel Fetch</button>
+    </div>
+
+    <div id="output">
+        <p style="color: #666; font-style: italic;">No execution triggered yet. Click one of the execution strategies above.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
